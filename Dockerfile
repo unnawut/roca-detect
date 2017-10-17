@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-RUN apk add --update \
+RUN apk add --update --no-cache \
     python \
     python-dev \
     py-pip \
@@ -8,8 +8,7 @@ RUN apk add --update \
     ca-certificates \
     libffi-dev \
     openssl-dev \
+    && pip install roca-detect \
     && rm -rf /var/cache/apk/*
-
-RUN pip install roca-detect
 
 CMD ["roca-detect", "/keys"]
