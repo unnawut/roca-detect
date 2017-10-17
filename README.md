@@ -7,13 +7,13 @@ A small docker container that set-ups and runs [roca-detect](https://github.com/
 Run the following docker command:
 
 ```
-docker run --rm -v /path/to/your/keys:/keys --network none roca-detect
+docker run --rm -v /path/to/your/keys:/keys --network none unnawut/roca-detect
 ```
 
 Or analyze the keys in your current working directory:
 
 ```
-docker run --rm -v $(pwd):/keys --network none roca-detect
+docker run --rm -v $(pwd):/keys --network none unnawut/roca-detect
 ```
 
 ### Notes on the `docker` flags used:
